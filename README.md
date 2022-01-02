@@ -1,4 +1,4 @@
 # rustdoc-coverage-action-example
 
-![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/bewee/7af9a0b9ffd24658ce9964baf703d802/raw/doc-coverage.json)
+![badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fbewee%2F7af9a0b9ffd24658ce9964baf703d802%2Fraw%2Fdoc-coverage.json)
 
