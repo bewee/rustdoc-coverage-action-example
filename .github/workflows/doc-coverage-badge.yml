@@ -1,4 +1,4 @@
-name: Doc Coverage
+name: Doc Coverage Badge
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - '*'
 
 jobs:
-  doc-coverage:
-    name: Doc Coverage
+  badge:
+    name: Doc Coverage Badge
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,4 +28,3 @@ jobs:
           label: doc cov
           message: "${{ steps.coverage.outputs.documented }}%"
           color: orange
-
