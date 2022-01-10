@@ -3,7 +3,7 @@ name: Doc Coverage Badge
 on:
   push:
     branches:
-      - '*'
+      - main
 
 jobs:
   badge:
