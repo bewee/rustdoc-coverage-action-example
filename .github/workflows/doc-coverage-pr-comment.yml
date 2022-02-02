@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
       - name: Install rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -23,8 +22,6 @@ jobs:
         uses: bewee/rustdoc-coverage-action@v1
       - name: Checkout head
         run: git checkout ${{ github.event.pull_request.head.sha }}
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Calculate doc coverage
         id: coverage
         uses: bewee/rustdoc-coverage-action@v1
