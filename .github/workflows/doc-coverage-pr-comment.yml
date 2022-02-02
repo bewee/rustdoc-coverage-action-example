@@ -8,16 +8,21 @@ jobs:
     name: Doc Coverage PR Comment
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
       - name: Install rust toolchain
         uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
+      - name: Fetch base
+        run: git fetch origin ${{ github.event.pull_request.base.sha }}
       - name: Checkout base
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.base.sha }}
+        run: git checkout ${{ github.event.pull_request.base.sha }}
       - name: Calculate base doc coverage
         uses: bewee/rustdoc-coverage-action@v1
+      - name: Checkout head
+        run: git checkout ${{ github.event.pull_request.head.sha }}
       - name: Checkout
         uses: actions/checkout@v2
       - name: Calculate doc coverage
