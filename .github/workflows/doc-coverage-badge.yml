@@ -19,6 +19,8 @@ jobs:
       - name: Calculate doc coverage
         id: coverage
         uses: bewee/rustdoc-coverage-action@v1
+        with:
+          percentage-format: 0%
       - name: Create Awesome Badge
         uses: schneegans/dynamic-badges-action@v1.1.0
         with:
@@ -26,5 +28,5 @@ jobs:
           gistID: 7af9a0b9ffd24658ce9964baf703d802
           filename: doc-coverage.json
           label: doc cov
-          message: "${{ steps.coverage.outputs.documented }}%"
+          message: ${{ steps.coverage.outputs.documented }}
           color: orange
