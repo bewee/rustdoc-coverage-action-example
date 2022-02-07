@@ -1,5 +1,7 @@
 //! Example module
 
+pub mod bil;
+
 /// Returns 42
 ///
 /// # Examples
